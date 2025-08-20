@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đơn xin phép Zangggg💖</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      height: 100vh;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      text-align: center;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      position: relative;
+      top: 10%;
+      z-index: 10;
+    }
+
+    h1 {
+      color: #ff3366;
+      font-size: 32px;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff99cc, 0 0 20px #ff66cc; }
+      to { text-shadow: 0 0 20px #ff3399, 0 0 30px #ff0066; }
+    }
+
+    p {
+      font-size: 20px;
+      color: #fff;
+      text-shadow: 1px 1px 3px #ff6699;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 10px;
+      transition: 0.3s;
+    }
+
+    #yes {
+      background-color: #4CAF50;
+      color: white;
+    }
+    #yes:hover { background-color: #45a049; }
+
+    #no {
+      background-color: #f44336;
+      color: white;
+      position: absolute;
+    }
+
+    img.cat {
+      width: 180px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      margin: 20px 0;
+    }
+
+    /* Hoa rơi */
+    .flower {
+      position: fixed;
+      top: -50px;
+      font-size: 24px;
+      animation: fall linear forwards;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    }
+
+    /* Tim bay */
+    .heart {
+      position: fixed;
+      bottom: 0;
+      color: #ff3366;
+      font-size: 20px;
+      animation: floatUp 6s linear forwards;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(0.5); opacity: 1; }
+      100% { transform: translateY(-110vh) scale(1.5); opacity: 0; }
+    }
+
+    /* Mèo chạy */
+    .run-cat {
+      position: fixed;
+      bottom: 0;
+      font-size: 40px;
+      animation: runAcross 8s linear infinite;
+    }
+
+    @keyframes runAcross {
+      0% { left: -50px; }
+      100% { left: 110%; }
+    }
+    .gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.g-img {
+  max-width: 150px;
+  border-radius: 40px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  animation: dance 3s infinite;
+}
+
+/* Animation lắc lư */
+@keyframes dance {
+  0%   { transform: translateY(0) rotate(0deg); }
+  25%  { transform: translateY(-10px) rotate(-5deg); }
+  50%  { transform: translateY(0) rotate(0deg); }
+  75%  { transform: translateY(-10px) rotate(5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ĐƠN ĐỆ XIN PHÉP SỬ DỤNG BẢN QUYỀN HÌNH ẢNH CỦA ZANG 😭💖</h1>
+    <img class="cat" src="cat.jpg" alt="cute cat">
+    <p>Hứa sẽ sử dụng nội bộ, và ngoại lệ lúc cần 🥰</p>
+    <div class="buttons">
+      <button id="yes">Zang chấp nhận nhó 💚</button>
+      <button id="no">Không bao giờ ❌</button>
+    </div>
+  </div>
+<div class="gallery">
+  <img src="g1.jpg" class="g-img">
+  <img src="g2.jpg" class="g-img">
+  <img src="g3.jpg" class="g-img">
+  <img src="g4.jpg" class="g-img">
+  <img src="g5.jpg" class="g-img">
+  <img src="g6.jpg" class="g-img">
+  <img src="g7.jpg" class="g-img">
+</div>
+  <!-- Nhạc nền -->
+  <audio autoplay loop>
+    <source src="zang.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Mèo chạy ngang -->
+  <div class="run-cat">🐱</div>
+  <div class="run-cat" style="animation-delay:4s;">🐈</div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+    const yesBtn = document.getElementById("yes");
+
+    yesBtn.addEventListener("click", () => {
+      alert("Híu biết mà hẹ hẹ💖");
+    });
+
+    // Nút chạy trốn (PC + Mobile)
+    function moveNoButton() {
+      const x = Math.floor(Math.random() * (window.innerWidth - noBtn.offsetWidth));
+      const y = Math.floor(Math.random() * (window.innerHeight - noBtn.offsetHeight));
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    }
+    noBtn.addEventListener("mouseover", moveNoButton);
+    noBtn.addEventListener("touchstart", moveNoButton);
+
+    // Tạo hoa rơi
+    function createFlower() {
+      const flower = document.createElement("div");
+      flower.className = "flower";
+      flower.innerHTML = ["🌸","🌺","🌼","🌷","💮"][Math.floor(Math.random()*5)];
+      flower.style.left = Math.random() * 100 + "vw";
+      flower.style.fontSize = (20 + Math.random()*20) + "px";
+      flower.style.animationDuration = (5 + Math.random()*5) + "s";
+      document.body.appendChild(flower);
+      setTimeout(()=>flower.remove(),10000);
+    }
+    setInterval(createFlower, 800);
+
+    // Tạo tim bay
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (15 + Math.random()*25) + "px";
+      heart.style.animationDuration = (6 + Math.random()*4) + "s";
+      document.body.appendChild(heart);
+      setTimeout(()=>heart.remove(),10000);
+    }
+    setInterval(createHeart, 600);
+  </script>
+</body>
+</html>
